@@ -1,0 +1,11 @@
+{:deps {org.clojure/clojure {:mvn/version "1.7.0"}
+        org.clojure/clojurescript {:mvn/version "1.9.493"}
+        clojure-csv/clojure-csv {:mvn/version "2.0.1"}}
+
+ :aliases {:dev {:extra-deps {org.clojure/clojure {:mvn/version "1.9.0-alpha14"}
+                              com.cemerick/piggieback {:mvn/version "0.2.1"}}
+                 :main-opts ["-m" "nrepl.cmdline"
+                             "--middleware" "[cemerick.piggieback/wrap-cljs-repl]"]}}
+
+ :paths ["src"] ;; Assuming your source code is in the "src" directory
+ }
