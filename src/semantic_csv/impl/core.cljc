@@ -40,7 +40,7 @@
       (try
         (update-in row [col] cast-fn)
         (catch #?(:clj Exception :cljs js/Object) e
-          (update-in row [col] (partial exception-handler col)))))))
+          (update-in row [col] (partial exception-handler e row col)))))))
 
 
 (defn cast-row
